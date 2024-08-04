@@ -6,14 +6,7 @@ type ChildrenTypeProps = {
 };
 
 //components
-type ButtonProps = {
-  theme: "success-full" | "danger-full" | "primary-full" | "success-hollow" | "danger-hollow" | "primary-hollow";
-  onClick?: (e: SyntheticEvent) => any;
-  onMouseOver?: (e: SyntheticEvent) => any;
-  width?: string;
-  height?: string;
-  children?: ReactNode | string;
-};
+
 
 // animation
 type KeyFrameType = CSSProperties & Keyframe;
@@ -51,8 +44,4 @@ type InputProps = {
 type TextInputProps = InputProps & {};
 type EmailInputProps = InputProps & {};
 type PasswordInputProps = InputProps & {};
-type FormPropsType = {
-  formObject: FormControlObjectType;
-  children: ReactNode;
-  handleInput: (e: SyntheticEvent) => void;
-};
+
