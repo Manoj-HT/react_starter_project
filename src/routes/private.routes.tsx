@@ -2,7 +2,6 @@ import { RouteObject } from "react-router-dom";
 import { AuthGuard } from "../guards/AuthGuard";
 import { ReactNode } from "react";
 import { AdminGuard, ContributorGuard, ReviewerGuard } from "../guards/RoleGuard";
-import { PageDoesNotExist } from "../pages/PageDoesNotExist";
 
 const adminOnly = (page : ReactNode) => <AdminGuard>{page}</AdminGuard>;
 const reviewerOnly = (page : ReactNode) => <ReviewerGuard>{page}</ReviewerGuard>;
@@ -16,7 +15,7 @@ export const private_routes = () => {
     route = {
       ...route,
       element : <AuthGuard> {current.element} </AuthGuard>,
-      errorElement : <PageDoesNotExist />
+      errorElement : <div>Something went wrong.</div>
     }
   }
   return routes;

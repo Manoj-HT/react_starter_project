@@ -8,8 +8,9 @@ export const router = createBrowserRouter([
       path : '/',
       element : <App />,
       children: [
-        ...public_routes(),
         ...private_routes(),
+        ...public_routes(),
       ],
-    }
+      
+    },
   ])
