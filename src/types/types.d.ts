@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode, SyntheticEvent } from "react";
+import { CSSProperties, Dispatch, ReactNode, SyntheticEvent, SetStateAction } from "react";
 
 // general purpose
 type ChildrenTypeProps = {
@@ -6,7 +6,13 @@ type ChildrenTypeProps = {
 };
 
 //components
-
+type ConfigType = {
+  baseApi : ""
+}
+type DataModifierType = {
+  data : object | null;
+  setData : Dispatch<SetStateAction<object | null>>
+}
 
 // animation
 type KeyFrameType = CSSProperties & Keyframe;

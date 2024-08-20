@@ -1,6 +1,6 @@
 import "./App.css";
-import { Outlet } from "react-router-dom";
+import Core from "./Core";
 
-const App = () => <Outlet />
+const App = () => <Core />;
 
 export default App;
